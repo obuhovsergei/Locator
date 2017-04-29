@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Locator.Server
+namespace Locator.Server.Controllers
 {
-    class Program
+    class AuthController
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

@@ -6,7 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace Android
+namespace Locator.Android
 {
     [Activity(Label = "Android", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity

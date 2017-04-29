@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Locator.Server.Controllers
 {
-    class Auth
+    class DataController
     {
     }
 }
