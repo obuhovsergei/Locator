@@ -1,12 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Nancy.Hosting.Self;
 
 namespace Locator.Server.Controllers
 {
-    class DataController
+    public class DataController : Nancy.NancyModule
     {
+        public DataController()
+        {
+            Get["/"] = x =>
+            {
+                return "hello!";
+            };
+            Post["/"] = x =>
+            {
+                var body = this.Request.Body;
+                int length = (int)body.Length;
+                byte[] data = new byte[length];
+                body.Read(data, 0, length);
+
+                Console.WriteLine(System.Text.Encoding.Default.GetString(data));
+
+                return "OK";
+            };
+        }
     }
 }
