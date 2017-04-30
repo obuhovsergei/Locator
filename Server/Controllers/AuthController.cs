@@ -10,3 +10,4 @@ namespace Locator.Server.Controllers
     {
     }
 }
+    
