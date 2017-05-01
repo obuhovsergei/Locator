@@ -1,44 +1,35 @@
 ﻿using System;
-using Android.App;
-using Android.Widget;
-using Android.OS;
-using Android.Locations;
 using System.Collections.Generic;
 using System.Linq;
-using Locator.API;
-using System.Net;
-using Newtonsoft.Json;
 using System.Text;
 
-namespace Locator.Android
-{
-    [Activity(Label = "Android", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity, ILocationListener
-    {
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
 
+namespace Locator.Android.Logic
+{
+    public class Location
+    {
+        /*
         Location _currentLocation;
         LocationManager _locationManager;
         string _locationProvider;
 
-        protected override void OnCreate(Bundle bundle)
-        {
-         
-            base.OnCreate(bundle);
-            InitializeLocationManager();
-            SetContentView(Resource.Layout.Main);
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
-        }
 
         protected override void OnResume()
         {
             base.OnResume();
-            _locationManager.RequestLocationUpdates(_locationProvider, 0, 0, this);
+            // _locationManager.RequestLocationUpdates(_locationProvider, 0, 0, this);
             Console.WriteLine(_currentLocation);
         }
         protected override void OnPause()
         {
             base.OnPause();
-            _locationManager.RemoveUpdates(this);
+            //_locationManager.RemoveUpdates(this);
         }
 
         public void OnLocationChanged(Location location)
@@ -47,7 +38,7 @@ namespace Locator.Android
             if (_currentLocation == null)
             {
                 Console.WriteLine(_currentLocation.Longitude + "  " + _currentLocation.Latitude);
-                
+
             }
             else
             {
@@ -100,6 +91,6 @@ namespace Locator.Android
             }
             Console.WriteLine("Using " + _locationProvider + ".");
         }
+        */
     }
 }
-
