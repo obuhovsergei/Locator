@@ -3,6 +3,7 @@ Location tracking application. Solution include Android app & server
 
 TODO:
 Android
+0. Check connection to server
 1. Registration and Auth
 2. Background sending location
 3. File load/save user profile
