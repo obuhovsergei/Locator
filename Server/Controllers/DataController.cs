@@ -7,11 +7,12 @@ namespace Locator.Server.Controllers
     {
         public DataController()
         {
-            Get["/"] = x =>
+            Get["/location"] = x =>
             {
-                return "hello!";
+                return "";
             };
-            Post["/"] = x =>
+
+            Post["/location"] = x =>
             {
                 var body = this.Request.Body;
                 int length = (int)body.Length;

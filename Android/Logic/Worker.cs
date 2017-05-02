@@ -14,6 +14,6 @@ namespace Locator.Android
 {
     public class Worker
     {
-
+        public string serverURL { get; set; }
     }
 }

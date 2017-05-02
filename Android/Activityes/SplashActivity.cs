@@ -13,7 +13,7 @@ using Android.Support.V4.App;
 
 namespace Locator.Android.Activityes
 {
-    [Activity(Label = "Splash Screen App", MainLauncher = true, Theme = "@style/Theme.Splash", NoHistory = true, Icon = "@drawable/Icon")]
+    [Activity(MainLauncher = true, Theme = "@style/Theme.Splash", NoHistory = true, Icon = "@drawable/Icon")]
     public class SplashActivity : Activity
     {
          

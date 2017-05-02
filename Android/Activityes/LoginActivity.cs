@@ -1,21 +1,18 @@
-﻿using System;
-using Android.App;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
-using Android.Locations;
-using System.Collections.Generic;
-using System.Linq;
-using Locator.API;
-using System.Net;
-using Newtonsoft.Json;
-using System.Text;
 using Android.Views;
+using Android.Widget;
+using Locator.Android.Logic;
+using System;
+using System.Net;
 
 namespace Locator.Android
 {
     [Activity(Label = "Android", Icon = "@drawable/icon")]
     public class LoginActivity : Activity
     {
+        TextView txt_Server;
+
         protected override void OnCreate(Bundle bundle)
         {
             RequestWindowFeature(WindowFeatures.NoTitle);
@@ -23,20 +20,27 @@ namespace Locator.Android
             SetContentView(Resource.Layout.Login);
             var b_signUp = FindViewById<Button>(Resource.Id.b_signUp);
             var b_signIn = FindViewById<Button>(Resource.Id.b_signIn);
-            var txt_Server = FindViewById<TextView>(Resource.Id.txt_serverIp);
+            txt_Server = FindViewById<TextView>(Resource.Id.txt_serverIp);
 
-            b_signUp.Click += B_signUp_Click;
-            b_signIn.Click += B_signIn_Click;
+            b_signUp.Click += B_sign_Click;
+            b_signIn.Click += B_sign_Click;
         }
 
-        private void B_signIn_Click(object sender, EventArgs e)
+        private void B_sign_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(SignInActivity));
-        }
+            if (REST.RequestGET(txt_Server.Text))
+            {
+                Manager.GetWorker().serverURL = txt_Server.Text;
+                if (((Button)sender).Id == Resource.Id.b_signUp)
+                {
+                    StartActivity(typeof(SignUpActivity));
+                }
+                else
+                {
+                    StartActivity(typeof(SignInActivity));
+                }
+            }
 
-        private void B_signUp_Click(object sender, EventArgs e)
-        {
-            StartActivity(typeof(SignUpActivity));
         }
     }
 }

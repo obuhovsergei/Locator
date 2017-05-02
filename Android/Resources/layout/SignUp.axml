@@ -15,9 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:nextFocusDown="@+id/txt_email_signup"
         android:imeOptions="actionNext"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:id="@+id/txt_name_signup" />
     <TextView
         android:text="Email"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -60,7 +60,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/txt_pass_repeat_signup"
         android:imeOptions="normal"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:gravity="center" />
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"

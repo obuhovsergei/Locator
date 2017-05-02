@@ -18,7 +18,11 @@ namespace Locator.Android
 
         public static Worker GetWorker()
         {
-            return worker ?? new Worker();
+            if (worker == null)
+            {
+                worker = new Worker();
+            }
+            return worker;
         }
     }
 }
