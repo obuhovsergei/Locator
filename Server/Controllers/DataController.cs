@@ -1,5 +1,8 @@
 ﻿using System;
 using Nancy.Hosting.Self;
+using Locator.Server.DataBase;
+using Newtonsoft.Json;
+using Locator.API;
 
 namespace Locator.Server.Controllers
 {
@@ -18,9 +21,18 @@ namespace Locator.Server.Controllers
                 int length = (int)body.Length;
                 byte[] data = new byte[length];
                 body.Read(data, 0, length);
-
-                Console.WriteLine(System.Text.Encoding.Default.GetString(data));
-
+                var text = System.Text.Encoding.Default.GetString(data);
+                Console.WriteLine(text);
+                try
+                {
+                    DataDB.addData(JsonConvert.DeserializeObject<Data>(text));
+                }
+                catch (Exception)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("ERROR Parse");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
                 return "OK";
             };
         }

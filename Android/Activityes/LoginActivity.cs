@@ -4,9 +4,8 @@ using Android.Views;
 using Android.Widget;
 using Locator.Android.Logic;
 using System;
-using System.Net;
 
-namespace Locator.Android
+namespace Locator.Android.Activityes
 {
     [Activity(Label = "Android", Icon = "@drawable/icon")]
     public class LoginActivity : Activity
@@ -30,7 +29,7 @@ namespace Locator.Android
         {
             if (REST.RequestGET(txt_Server.Text))
             {
-                Manager.GetWorker().serverURL = txt_Server.Text;
+                Manager.GetWorker().ServerURL = txt_Server.Text;
                 if (((Button)sender).Id == Resource.Id.b_signUp)
                 {
                     StartActivity(typeof(SignUpActivity));

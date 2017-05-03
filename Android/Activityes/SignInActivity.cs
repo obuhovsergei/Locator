@@ -1,18 +1,12 @@
-﻿using System;
-using Android.App;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
-using Android.Locations;
-using System.Collections.Generic;
-using System.Linq;
-using Locator.API;
-using System.Net;
-using Newtonsoft.Json;
-using System.Text;
 using Android.Views;
+using Android.Widget;
 using Locator.Android.Logic;
+using Locator.API;
+using System;
 
-namespace Locator.Android
+namespace Locator.Android.Activityes
 {
     [Activity(Label = "Android", Icon = "@drawable/icon")]
     public class SignInActivity : Activity
@@ -39,12 +33,13 @@ namespace Locator.Android
         {
             if (txt_Email.Text != null && txt_Password.Text !=null)
             {
-                Auth auth = new Auth
+                User auth = new User
                 {
                     Email = txt_Email.Text,
                     Password = txt_Password.Text
                 };
-                REST.RequestPOST(Manager.GetWorker().serverURL+"/signin",auth);
+                Manager.GetWorker().User = REST.RequestPOST(Manager.GetWorker().ServerURL+"/signin", auth);
+                StartActivity(typeof(MapActivity));
             }
         }
 

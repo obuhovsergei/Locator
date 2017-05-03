@@ -63,11 +63,11 @@ namespace Locator.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060010
-			public const int b_ok_signUp = 2131099664;
+			// aapt resource value: 0x7f060011
+			public const int b_ok_signUp = 2131099665;
 			
-			// aapt resource value: 0x7f060009
-			public const int b_ok_signin = 2131099657;
+			// aapt resource value: 0x7f06000a
+			public const int b_ok_signin = 2131099658;
 			
 			// aapt resource value: 0x7f060005
 			public const int b_signIn = 2131099653;
@@ -84,32 +84,35 @@ namespace Locator.Android
 			// aapt resource value: 0x7f060000
 			public const int textView1 = 2131099648;
 			
-			// aapt resource value: 0x7f060007
-			public const int textView2 = 2131099655;
-			
-			// aapt resource value: 0x7f06000e
-			public const int textView3 = 2131099662;
-			
-			// aapt resource value: 0x7f06000a
-			public const int textView4 = 2131099658;
-			
-			// aapt resource value: 0x7f06000c
-			public const int txt_email_signup = 2131099660;
-			
-			// aapt resource value: 0x7f060006
-			public const int txt_email_singin = 2131099654;
-			
-			// aapt resource value: 0x7f06000b
-			public const int txt_name_signup = 2131099659;
+			// aapt resource value: 0x7f060008
+			public const int textView2 = 2131099656;
 			
 			// aapt resource value: 0x7f06000f
-			public const int txt_pass_repeat_signup = 2131099663;
+			public const int textView3 = 2131099663;
 			
-			// aapt resource value: 0x7f060008
-			public const int txt_pass_signin = 2131099656;
+			// aapt resource value: 0x7f06000b
+			public const int textView4 = 2131099659;
+			
+			// aapt resource value: 0x7f060006
+			public const int txt_Map_userName = 2131099654;
 			
 			// aapt resource value: 0x7f06000d
-			public const int txt_pass_signup = 2131099661;
+			public const int txt_email_signup = 2131099661;
+			
+			// aapt resource value: 0x7f060007
+			public const int txt_email_singin = 2131099655;
+			
+			// aapt resource value: 0x7f06000c
+			public const int txt_name_signup = 2131099660;
+			
+			// aapt resource value: 0x7f060010
+			public const int txt_pass_repeat_signup = 2131099664;
+			
+			// aapt resource value: 0x7f060009
+			public const int txt_pass_signin = 2131099657;
+			
+			// aapt resource value: 0x7f06000e
+			public const int txt_pass_signup = 2131099662;
 			
 			// aapt resource value: 0x7f060001
 			public const int txt_serverIp = 2131099649;
@@ -131,10 +134,13 @@ namespace Locator.Android
 			public const int Login = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int SignIn = 2130903041;
+			public const int Map = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int SignUp = 2130903042;
+			public const int SignIn = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int SignUp = 2130903043;
 			
 			static Layout()
 			{
