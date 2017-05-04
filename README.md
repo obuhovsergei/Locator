@@ -1,16 +1,22 @@
 # Locator
 Location tracking application. Solution include Android app & server
 
-Using libraries:
-  1. Nancy.Self.Hosting
-  2. LiteDB
-  
-TODO: Android
-1. Check connection to server
-2. Registration and Auth
-3. Background sending location
-4. File load/save user profile
+### Using libraries
 
-TODO: Server
-1. Create DB structure
-2. Android 1.
+- [Xamarin](https://www.xamarin.com/)
+- [LiteDB](http://www.litedb.org/)
+- [Nancy.Self.Hosting](https://github.com/NancyFx/Nancy)
+
+### TODO: Android
+- [x] Check connection to server
+- [x] Registration and Auth
+- [x] Background sending location
+- [ ] File load/save user profile
+- [ ] ??? migrate to Xamarin.Forms ???
+
+### TODO: Server
+- [x] Create DB structure 
+- [x] Check connection to server 
+- [ ] Web views
+- [ ] Group ID , binding User - Group
+
