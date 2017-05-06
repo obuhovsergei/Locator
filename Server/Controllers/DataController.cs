@@ -1,8 +1,7 @@
-﻿using System;
-using Nancy.Hosting.Self;
+﻿using Locator.API;
 using Locator.Server.DataBase;
 using Newtonsoft.Json;
-using Locator.API;
+using System;
 
 namespace Locator.Server.Controllers
 {
