@@ -12,7 +12,7 @@ Location tracking application. Solution include Android app & server
 - [x] Registration and Auth
 - [x] Background sending location
 - [ ] File load/save user profile
-- [ ] ??? migrate to Xamarin.Forms ???
+- [ ] Add Google maps SDK
 
 ### TODO: Server
 - [x] Create DB structure 
